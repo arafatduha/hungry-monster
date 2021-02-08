@@ -60,6 +60,7 @@
     -webkit-filter: brightness(70%); 
     filter: brightness(70%);
 }
-#submitButton{
-  color: white  !important;
+#message{
+  color: rgb(151, 14, 14)  !important;
+  
 }
