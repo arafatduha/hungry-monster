@@ -5,7 +5,7 @@ const displayMeals = meals => {
         const column = document.createElement('div')
         column.className = "col-md-3 "
         const foodInfo = `
-        <div onclick="displayDetails('${food.idMeal}')" class="items-image card w-100 overflow-hidden">
+        <div onclick="getDetails('${food.idMeal}')" class="items-image card w-100 overflow-hidden">
         <img src="${food.strMealThumb}" class="card-img-top" alt="...">
         <div class="card-body">
             <h4 class="card-title text-center"> Name: ${food.strMeal} </h4>
@@ -69,12 +69,13 @@ const displayMessage = message =>{
 
 
 // Food Details 
-const foodDetails = idMeal =>{
-     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
-     fetch(url) 
-        .then(res=> res.json)
-        .then(data=> displayMeals(data.meals))
+const getDetails = idMeal => {
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
+    fetch(url)
+        .then(response => response.json())
+        .then(data => displayDetails(data.meals))
 }
+
 
 //clear display
 const clearDisplay = () => {
