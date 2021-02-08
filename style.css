@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
      
-    color: #000000;     
+    color: #0084ff;     
     text-align:center; 
   }
-  
+
   /* Style the search field */
   form.example input[type=text] {
     margin:auto;max-width:300px;
@@ -46,7 +46,6 @@
   margin-top:70px;
 }
 .navbar-brand img{
-
     width: 100px;
 }
 .single-item-image{
@@ -58,6 +57,9 @@
     transition: all.2s;
 }
 .items-image:hover img{
-    -webkit-filter: brightness(50%); 
-    filter: brightness(50%);
+    -webkit-filter: brightness(70%); 
+    filter: brightness(70%);
+}
+#submitButton{
+  color: white  !important;
 }
