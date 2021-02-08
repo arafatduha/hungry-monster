@@ -8,9 +8,9 @@ const displayMeals = meals => {
         <div onclick="getDetails('${food.idMeal}')" class="items-image card w-100 overflow-hidden">
         <img src="${food.strMealThumb}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h4 class="card-title text-center"> Name: ${food.strMeal} </h4>
-            <h4 class="text-center">Food Category: ${food.strCategory}</h4>
-            <h5 text-center"> origin: ${food.strArea} </h5>
+            <h5 class="card-title text-center"> Name: ${food.strMeal} </h5>
+            <h5 class="text-center">Food Category: ${food.strCategory}</h5>
+            <h6 text-center"> origin: ${food.strArea} </h6>
         </div>
         `
         column.innerHTML = foodInfo;
@@ -100,7 +100,7 @@ const displayDetails = meals => {
                             ${ingredientList(food)}
                         </ul>
                         <h3>!!Steps to Get the taste of it!!</h3>
-                        <p class="bg-primary">${food.strInstructions}
+                        <p class="bg-secondary">${food.strInstructions}
                         </p>
                     </div>
                 </div>
